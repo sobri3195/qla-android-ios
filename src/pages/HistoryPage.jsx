@@ -12,9 +12,9 @@ function HistoryPage() {
   return (
     <section className="page stack-md">
       <header>
-        <p className="eyebrow">Archive</p>
-        <h2>History</h2>
-        <p className="muted">All your dummy bookings stored in localStorage.</p>
+        <p className="eyebrow">Records</p>
+        <h2>Session History</h2>
+        <p className="muted">All simulated booking and transaction records are stored in local storage.</p>
       </header>
       <BookingList bookings={bookings} emptyMessage="No records yet." />
     </section>
