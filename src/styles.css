@@ -1,0 +1,261 @@
+:root {
+  --bg: #0f0f10;
+  --surface: #19191b;
+  --surface-soft: #202024;
+  --text: #f4f4f5;
+  --muted: #c5c0b7;
+  --gold: #c6a972;
+  --gold-soft: #ead9b5;
+  --border: #2f2f34;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1d1d21 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding-bottom: 5.5rem;
+}
+
+.page-content {
+  min-height: 100vh;
+}
+
+.card {
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.brand-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+}
+
+.brand-subtitle {
+  color: var(--muted);
+  margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+.brand-mark {
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  color: var(--gold-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 0.35rem;
+}
+
+.stack-lg,
+.stack-md,
+.stack-sm {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-lg {
+  gap: 1.25rem;
+}
+
+.stack-md {
+  gap: 0.9rem;
+}
+
+.stack-sm {
+  gap: 0.6rem;
+}
+
+.row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-card {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.service-icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--gold);
+  border-radius: 0.75rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.service-card p,
+.muted {
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 0.3rem;
+}
+
+.premium-card {
+  border-color: color-mix(in srgb, var(--gold) 48%, var(--border));
+}
+
+.premium-button {
+  border: 1px solid color-mix(in srgb, var(--gold) 60%, #fff);
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8f7547, var(--gold));
+  color: #151515;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+.premium-button.full {
+  width: 100%;
+}
+
+.premium-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  background: var(--surface-soft);
+  color: var(--text);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.feedback {
+  color: var(--gold-soft);
+}
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.booking-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: rgba(15, 15, 16, 0.96);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.nav-item {
+  color: #dbd8d3;
+  text-decoration: none;
+  padding: 0.6rem 0.2rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+}
+
+.nav-item.active {
+  color: var(--gold-soft);
+}
+
+.empty-state {
+  color: var(--muted);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.benefits-list {
+  margin: 0;
+  padding-left: 1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-top: 1.5rem;
+  }
+
+  .app-shell {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+}
