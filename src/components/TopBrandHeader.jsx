@@ -2,9 +2,11 @@ function TopBrandHeader() {
   return (
     <header className="brand-header card">
       <div>
-        <p className="eyebrow">QUALITY LIFE WITHOUT AGING</p>
-        <h1>QLA</h1>
-        <p className="brand-subtitle">Luxury medical wellness for modern longevity.</p>
+        <p className="eyebrow">Quality Life Without Aging</p>
+        <h1>QLA Medical Wellness</h1>
+        <p className="brand-subtitle">
+          Premium preventive medicine, diagnostics, and recovery programs led by licensed clinicians.
+        </p>
       </div>
       <div className="brand-mark" aria-hidden>
         QLA
